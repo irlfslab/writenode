@@ -1,12 +1,13 @@
-import {Header, Footer} from "./components";
+import { Header, Footer } from "./components";
+import { AllRoutes } from "./routes/AllRoutes";
 import './App.css'
 
 function App() {
   return (
       <div className="App">
-        <Header/>
-        <h1>Hello World</h1>
-        <Footer/>
+        <Header />
+        <AllRoutes />
+        <Footer />
       </div>
   );
 }

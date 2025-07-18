@@ -1,3 +1,3 @@
 export {HomePage} from "./HomePage";
-export {CreaePost} from "./CreatePost";
+export {CreatePost} from "./CreatePost";
 export {PageNotFound} from "./PageNotFound";
