@@ -8,7 +8,7 @@ export const HomePage = () => {
   return (
     <section>
       { posts.map(post => (
-        <PostCard post={post} />
+        <PostCard key={post.id} post={post} />
       ))}
     </section>
   )
