@@ -5,9 +5,9 @@
 
 /* Header Component */
 header{
-  height: 70px;
-  padding: 10px;
-  border-bottom: 1px solid #F2EBE9;
+  height: 80px;
+  padding: 20px;
+  border-bottom: 2px solid #F2EBE9;
   display: flex;
   justify-content: space-between;
 }
@@ -17,11 +17,11 @@ header{
   align-items: center;
 }
 .logo img{
-  max-width: 40px;
+  max-width: 50px;
 }
 
 .logo span{
-  font-size: 20px;
+  font-size: 25px;
   padding: 5px;
 }
 
@@ -36,12 +36,12 @@ header{
 
 .nav .link.active{
   background-color: #F2EBE9;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .nav .auth{
   border: 0px;
-  border-radius: 5px;
+  border-radius: 10px;
   margin-left: 10px;
   padding: 10px;
   font-size: 16px;
@@ -103,22 +103,22 @@ header{
 /* Create Blog Post Component */
 .create .heading{
   text-align: center;
-  font-size: 22px;
+  font-size: 20px;
   margin-top: 20px;
 }
 
 .createPost{
   display: flex;
   flex-direction: column;
-  max-width: 700px;
-  margin: 20px auto;
+  max-width: 600px;
+  margin: 10px auto;
 }
 
 .createPost .title{
   font-size: 20px;
   margin: 10px 0px;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 10px;
   border: 0px;
   box-shadow: #F2EBE9 0px 1px 4px;
 
@@ -138,9 +138,9 @@ header{
   font-size: 18px;
   margin: 10px 0px;
   padding: 15px 20px;
-  background-color: #5FD068;
+  background-color: #217a28;
   border: 0px;
-  border-radius: 5px;
+  border-radius: 10px;
   color: #ffffff;
   cursor: pointer;
 }
@@ -154,7 +154,7 @@ header{
 }
 
 .pageNotFound p {
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 500;
   margin: 25px auto;
 }
@@ -167,11 +167,11 @@ header{
 
 .pageNotFound button{
   border: 0px;
-  border-radius: 5px;
+  border-radius: 10px;
   margin-left: 10px;
   padding: 10px 20px;
   font-size: 20px;
-  background-color: #1C59AE;
+  background-color: #3241c9;
   color: #ffffff;
   cursor: pointer;
 }
