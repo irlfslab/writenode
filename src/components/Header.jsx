@@ -5,7 +5,7 @@ import Logo from "../assets/logo.png"
 import { useState } from "react";
 
 export const Header = () => {
-  const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth") || false);
+  const [isAuth, setIsAuth] = useState(JSON.parse(localStorage.getItem("isAuth")) || false);
 
   function handleLogin() {
     signInWithPopup(auth, provider).then((result) => {
@@ -23,8 +23,8 @@ export const Header = () => {
   return (
     <header>
       <Link to="/" className="logo">
-        <img src={Logo} alt="WriteNode Logo" />
-        <span>WriteNode</span>
+        <img src={Logo} alt="WritePost Logo" />
+        <span>WritePost</span>
       </Link>
       <nav className="nav">
         <NavLink to="/" className="link">Home</NavLink>
