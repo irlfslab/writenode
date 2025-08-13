@@ -1,12 +1,23 @@
 import { addDoc, collection } from "firebase/firestore";
 import { db, auth} from "../firebase/config";
+import { useNavigate } from "react-router";
 
 export const CreatePost = () => {
+  const navigate = useNavigate();
+  const postRef = collection(db, "posts");
   async function handleCreatePost(event) {
     event.preventDefault();
+    console.log(auth);
     const document = {
-      title: "ABC",
+      title: event.target.title.value,
+      description: event.target.description.value,
+      author: {
+        name: auth.currentUser.displayName,
+        id: auth.currentUser.uid
+      }
     }
+    await addDoc(postRef, document);
+    navigate("/");
   }
   return (
     <section className="create">
