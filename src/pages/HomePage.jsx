@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { getDocs, collection } from "firebase/firestore";
 import { db } from "../firebase/config"
 import { PostCard } from "../components";
@@ -11,7 +11,8 @@ export const HomePage = () => {
   ]
     **/
    const [posts, setPosts] = useState([]);
-   const postsRef = collection(db, "posts");
+   const [toggle, setToggle] = useState(false);
+   const postsRef = useRef(collection(db, "posts"));
    useEffect(() => {
       async function getPosts() {
         const data = await getDocs(postsRef);
@@ -21,12 +22,12 @@ export const HomePage = () => {
       }
       console.log("---")
       getPosts(); 
-   },[]);
+   },[postsRef, toggle]);
 
   return (
     <section>
       { posts.map(post => (
-        <PostCard key={post.id} post={post} />
+        <PostCard key={post.id} post={post} toggle={toggle} setToggle={setToggle} />
       ))}
     </section>
   )
