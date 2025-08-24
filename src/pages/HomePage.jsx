@@ -2,7 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import { useTitle} from "../hooks/useTitle";
 import { getDocs, collection } from "firebase/firestore";
 import { db } from "../firebase/config"
-import { PostCard } from "../components";
+import { PostCard, SkeletonCard } from "../components";
 
 export const HomePage = () => {
   /** 
@@ -11,7 +11,7 @@ export const HomePage = () => {
     {id: 2, title: "Lorem ipsum dolor", description: "Lorem ipsum dolor sit, amet consectetur", author: "User1"}
   ]
     **/
-   const [posts, setPosts] = useState([]);
+   const [posts, setPosts] = useState([false, false, false]);
    const [toggle, setToggle] = useState(false);
    useTitle("Home");
    const postsRef = useRef(collection(db, "posts"));
@@ -29,7 +29,11 @@ export const HomePage = () => {
   return (
     <section>
       { posts.map(post => (
+        post ? (
         <PostCard key={post.id} post={post} toggle={toggle} setToggle={setToggle} />
+        ) : (
+          <SkeletonCard />
+        )
       ))}
     </section>
   )
