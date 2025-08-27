@@ -96,8 +96,9 @@ header{
 }
 
 .card .delete{
-  color: #ff4747;
+  color: #dd3030;
   cursor: pointer;
+  font-size: 25px;
 }
 
 /* Create Blog Post Component */
@@ -125,20 +126,20 @@ header{
 }
 
 .createPost .description{
-  font-size: 20px;
+  font-size: 15px;
   margin: 10px 0px;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 10px;
   border: 0px;
   box-shadow: #F2EBE9 0px 1px 4px;
   height: 300px;
 }
 
 .createPost button{
-  font-size: 18px;
+  font-size: 22px;
   margin: 10px 0px;
-  padding: 15px 20px;
-  background-color: #217a28;
+  padding: 15px 15px;
+  background-color: #5e4499;
   border: 0px;
   border-radius: 10px;
   color: #ffffff;
