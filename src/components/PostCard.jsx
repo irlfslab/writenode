@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router";
 import { doc, deleteDoc } from "firebase/firestore";
 import { auth, db } from "../firebase/config";
-import { use } from "react";
 
 export const PostCard = ({post, toggle, setToggle}) => {
     const navigate = useNavigate();

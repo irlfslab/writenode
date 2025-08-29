@@ -18,7 +18,9 @@ export const Header = () => {
   function handleLogout() {
     signOut(auth);
     setIsAuth(false);
-    localStorage.setItem("isAuth", false);
+    localStorage.setItem("isAuth", false);  
+    localStorage.removeItem("isAuth");
+    localStorage.clear();
   }
   return (
     <header>
