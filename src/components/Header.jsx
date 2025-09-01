@@ -9,7 +9,6 @@ export const Header = () => {
 
   function handleLogin() {
     signInWithPopup(auth, provider).then((result) => {
-    console.log(result);
     setIsAuth(true);
     localStorage.setItem("isAuth", true);
     })
@@ -18,9 +17,7 @@ export const Header = () => {
   function handleLogout() {
     signOut(auth);
     setIsAuth(false);
-    localStorage.setItem("isAuth", false);  
-    localStorage.removeItem("isAuth");
-    localStorage.clear();
+    localStorage.setItem("isAuth", false);
   }
   return (
     <header>

@@ -10,13 +10,15 @@ export const PostCard = ({post, toggle, setToggle}) => {
     console.log('title', title)
     console.log('desc', description)
     console.log('author', author.name)
-
-    async function handleDelete(){
-      const document = doc(db, "posts", id);
-      await deleteDoc(document);
-      navigate("/");
-      setToggle(!toggle);
-    }
+    console.log('isAuth', isAuth)
+    
+    async function handleDelete() {
+        const document = doc(db, "posts", id);
+        await deleteDoc(document);
+        navigate("/");
+        setToggle(!toggle); 
+       }
+       
 
   return (
     <div className="card">

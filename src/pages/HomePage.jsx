@@ -11,7 +11,7 @@ export const HomePage = () => {
     {id: 2, title: "Lorem ipsum dolor", description: "Lorem ipsum dolor sit, amet consectetur", author: "User1"}
   ]
     **/
-   const [posts, setPosts] = useState([false, false, false]);
+   const [posts, setPosts] = useState(new Array(2).fill(false));
    const [toggle, setToggle] = useState(false);
    useTitle("Home");
    const postsRef = useRef(collection(db, "posts"));
@@ -28,11 +28,11 @@ export const HomePage = () => {
 
   return (
     <section>
-      { posts.map(post => (
+      { posts.map((post, idx) => (
         post ? (
         <PostCard key={post.id} post={post} toggle={toggle} setToggle={setToggle} />
         ) : (
-          <SkeletonCard />
+          <SkeletonCard key={idx}/>
         )
       ))}
     </section>
