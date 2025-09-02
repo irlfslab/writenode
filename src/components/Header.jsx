@@ -15,7 +15,11 @@ export const Header = () => {
   }
 
   function handleLogout() {
-    signOut(auth);
+    signOut(auth).then(() => {
+      window.location.reload();
+    }).catch((error) => {
+      console.error("Error signing out", error)
+    });
     setIsAuth(false);
     localStorage.setItem("isAuth", false);
   }
