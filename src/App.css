@@ -75,7 +75,7 @@ header{
   font-weight: 600;
 }
 
-.card .description{
+.card .desc{
   font-size: 16px;
   margin: 20px 5px;
 }
@@ -125,7 +125,7 @@ header{
 
 }
 
-.createPost .description{
+.createPost .desc{
   font-size: 15px;
   margin: 10px 0px;
   padding: 10px;

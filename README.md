@@ -1,12 +1,51 @@
-# React + Vite
+# WritePost
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+WritePost application that display and maintain the blog post **React Router V7.7**. This project fetches post data from the Firebase.  The user can login the application through authorization of google mail from firebase.  Once login, users are allowed to create and delete own blog posts.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Technologies Used](#technologies-used)
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Dynamic Routing:** Leverages React Router V7.7 to handle multiple routes and dynamic URL parameters.
+- **Data Fetching:** Uses firestore function to add, fetch posts and delete documents from firebase.
+- **Modular Code:** Organized into reusable components for easy maintenance.
+
+
+## Installation
+
+1. **Install dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+2. **Run the development server:**
+
+   ```bash
+   npm run dev
+   ```
+
+3. **Open your browser and navigate to:**
+
+   ```
+   http://localhost:5173
+   ```
+
+## Usage
+
+- **Home Page:** Display the blog posts and related link tabs.
+- **Login Page** This page is to login the app through google mail.
+- **Create Page:** This page can create and delete the blog posts after login.
+
+## Technologies Used
+
+- **React:** JavaScript library for building user interfaces.
+- **React Router V7.7:** For handling routing and navigation.
+- **React Loading Skeleton V3.5** Provides as placeholder display to improve perceived loading time and user experience.
+- **Vite:** Fast development server and build tool.
+

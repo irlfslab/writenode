@@ -3,7 +3,7 @@ import React, { useEffect } from 'react'
 export const useTitle = (title) => {
   
   useEffect(() => {
-    document.title = `${title} - WriteBlog`;
+    document.title = `${title} - WritePost`;
   }, [title])
   return null;
 }

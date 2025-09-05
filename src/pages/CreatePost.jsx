@@ -13,7 +13,7 @@ export const CreatePost = () => {
 
     const document = {
       title: event.target.title.value,
-      description: event.target.description.value,
+      desc: event.target.desc.value,
       author: {
         name: auth.currentUser.displayName,
         id: auth.currentUser.uid
@@ -30,7 +30,7 @@ export const CreatePost = () => {
       </div>
       <form className="createPost" onSubmit={handleCreatePost}>
         <input type="text" className="title" name="title" placeholder="Title" maxLength="50" required />
-        <textarea type="text" className="description" name="description" placeholder="Description" maxLength="600" required ></textarea>
+        <textarea type="text" className="desc" name="desc" placeholder="Description" maxLength="600" required ></textarea>
         <button type="submit" className="submit">Create</button>
       </form>
     </section>
